@@ -1,0 +1,13 @@
+﻿@model List<Feedback1.Models.Questionnaire>
+<h5>Select  Questionnaire</h5>
+<form action="DeleteQuestionnaire" method="POST" id="form1">
+    <select name="id" size="5" style="width: 250px" id="questionnaireId">
+        @foreach (var c in Model)
+        {
+            <option value="@c.QuestionnaireId">@c.Title</option>
+        }
+    </select>
+    <br />
+    <input type="submit" value="DELETE" id="Select" />
+    
+</form>

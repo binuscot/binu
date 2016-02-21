@@ -1,0 +1,18 @@
+﻿@model List< Feedback1.Models.Questionnaire>
+
+@{
+    ViewBag.Title = "View1";
+}
+
+<h2>Select Questionnaire</h2>
+<form action="DisplayQuestionnaire" method="GET" id="form1">
+    <select name="id" size="5" style="width: 250px" id="questionnaireId">
+        @foreach (var c in Model)
+        {
+            <option value="@c.QuestionnaireId">@c.Title</option>
+        }
+    </select>
+    <br />
+    <input type="submit" value="Display" id="Select" />
+    
+</form>

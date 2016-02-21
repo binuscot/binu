@@ -1,0 +1,23 @@
+﻿@model List<Feedback1.Models.Questionnaire>
+
+@{
+    ViewBag.Title = "SelectQuestionnaire";
+}
+
+<h4> SELECT QUESTIONNAIRES</h4>
+<!---selecting the id of the Questionnaire to add questons--->
+
+
+<form action="AddQuestions" method="GET" id="form1">
+    <select name="id" size="5" style="width: 250px" id="questionnaireId">
+        @foreach (var c in Model)
+        {
+            <option value="@c.QuestionnaireId">@c.Title</option>
+        }
+    </select>
+    <br />
+    <input type="submit" value="Add Questions" id="Select" />
+    
+</form>
+
+
